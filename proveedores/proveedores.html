@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Proveedores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Agregar Nuevo Proveedor</h2>
+    <form action="proveedores_insert.php" method="POST">
+        <label>Nombre de la empresa:</label>
+        <input type="text" name="nombre_empresa" required>
+
+        <label>Nombre del contacto:</label>
+        <input type="text" name="contacto_nombre" required>
+
+        <label>Teléfono:</label>
+        <input type="text" name="telefono" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Dirección:</label>
+        <input type="text" name="direccion" required>
+
+        <label>Tiempo de entrega (días):</label>
+        <input type="number" name="tiempo_entrega" required>
+
+        <label>Condiciones de pago:</label>
+        <input type="text" name="condiciones_pago" required>
+
+        <label>Estado:</label>
+        <select name="estado">
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+        </select>
+
+        <button type="submit">Agregar Proveedor</button>
+    </form>
+</body>
+</html>
