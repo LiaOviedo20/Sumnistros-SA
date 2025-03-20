@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+
+
+<form action="insertar.php" method="POST">
+    <input type="text" name="razon_social" placeholder="Razon Social" required>
+    <input type="text" name="nombre_contacto" placeholder="Nombre del Contacto" required>
+    <input type="text" name="telefono" placeholder="Telefono" required>
+    <input type="email" name="correo_electronico" placeholder="Correo Electronico" required>
+    <input type="text" name="direccion_facturacion" placeholder="Direccion de Facturacion" required>
+    <input type="text" name="direccion_envio" placeholder="Direccion de Envio" required>
+
+    <select name="condiciones_pago" required>
+        <option value="contado">Contado</option>
+        <option value="crédito">Crédito</option>
+        <option value="pagos parciales">Pagos Parciales</option>
+    </select>
+
+    <select name="tipo_cliente" required>
+        <option value="mayorista">Mayorista</option>
+        <option value="minorista">Minorista</option>
+        <option value="corporativo">Corporativo</option>
+    </select>
+
+    <select name="estado" required>
+        <option value="activo">Activo</option>
+        <option value="inactivo">Inactivo</option>
+    </select>
+
+    <button type="submit">Registrar Cliente</button>
+</form>
