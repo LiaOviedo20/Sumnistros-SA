@@ -1,0 +1,93 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5f5; /* Morado claro */
+    color: #4a148c; /* Morado oscuro */
+    margin: 20px;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #d1c4e9; /* Morado suave */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Títulos */
+h2 {
+    color: #6a1b9a; /* Morado intenso */
+}
+
+/* Formularios */
+form {
+    background: #b39ddb; /* Morado medio */
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #4a148c;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #6a1b9a;
+    border-radius: 5px;
+}
+
+/* Botón de enviar */
+button {
+    background: #6a1b9a; /* Morado intenso */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #4a148c; /* Morado más oscuro */
+}
+
+/* Tabla de Inventario */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #6a1b9a;
+    text-align: left;
+}
+
+th {
+    background: #8e24aa; /* Morado fuerte */
+    color: white;
+}
+
+/* Links de acciones (Editar/Eliminar) */
+a {
+    text-decoration: none;
+    color: #8e24aa;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #4a148c;
+}

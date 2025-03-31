@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Inventario</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Gestión de Inventario</h2>
+
+        <form action="insert.php" method="POST">
+            <label>Nombre del Producto:</label>
+            <input type="text" name="nombre_producto" required>
+            
+            <label>Ubicación:</label>
+            <input type="text" name="ubicacion" required>
+        
+            <label>Stock Actual:</label>
+            <input type="number" name="stock_actual" required>
+        
+            <label>Stock Mínimo:</label>
+            <input type="number" name="stock_minimo" required>
+        
+            <label>Stock Máximo:</label>
+            <input type="number" name="stock_maximo" required>
+        
+            <label>Estado:</label>
+            <input type="text" name="estado" required>
+        
+            <label>Lote/Número de Serie:</label>
+            <input type="text" name="lote_numero_serie">
+        
+            <label>Unidad de Medida:</label>
+            <input type="text" name="unidad_medida" required>
+        
+            <button type="submit">Registrar</button>
+        </form>
+
+        <h2>Lista de Inventario</h2>
+        <table id="inventarioTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Ubicación</th>
+                    <th>Stock</th>
+                    <th>Stock Minimo</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos se llenarán desde PHP -->
+                <?php include("inventario/read.php"); ?>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#inventarioTable').DataTable();
+        });
+    </script>
+
+</body>
+</html>

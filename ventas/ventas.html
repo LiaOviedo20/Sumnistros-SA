@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ventas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h2>Registrar Venta</h2>
+    <form action="insert.php" method="POST">
+        <label>ID Cliente:</label>
+        <input type="number" name="id_cliente" required>
+        
+        <label>Fecha Venta:</label>
+        <input type="datetime-local" name="fecha_venta" required>
+
+        <label>Número de Factura:</label>
+        <input type="text" name="num_factura" required>
+
+        <label>Monto Total:</label>
+        <input type="number" step="0.01" name="monto_total" required>
+
+        <label>Método de Pago:</label>
+        <select name="metodo_pago">
+            <option value="tarjeta">Tarjeta</option>
+            <option value="efectivo">Efectivo</option>
+        </select>
+
+        <label>Condición de Pago:</label>
+        <select name="condicion_pago">
+            <option value="contado">Contado</option>
+            <option value="crédito">Crédito</option>
+        </select>
+
+        <label>Fecha Entrega:</label>
+        <input type="date" name="fecha_entrega" required>
+
+        <label>Estado de Venta:</label>
+        <select name="estado_venta">
+            <option value="pagada">Pagada</option>
+            <option value="pendiente">Pendiente</option>
+        </select>
+
+        <label>Observaciones:</label>
+        <textarea name="observaciones"></textarea>
+
+        <button type="submit">Registrar Venta</button>
+    </form>
+
+    <a href="read.php">Ver Ventas</a>
+</body>
+</html>
